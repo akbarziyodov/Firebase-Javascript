@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firebase</title>
+
+    <link rel="stylesheet" href="files/bootstrap.min.css">
+</head>
+<body>
+
+    <section class="wrapper">
+        <div class="container my-5">
+            <div class="row justify-content-md-center align-items-center">
+                <div class="col-10 align-self-center">
+                    <h1 class="mb-4">Recipes</h1>
+                    <div class="recipe-cards mb-4">
+                        <div class="cards row">
+
+                        </div>
+                    </div>
+                    <div class="add-new">
+                        <form class="newform">
+                            <h3><label for="title">Add a new recipe:</label></h3>
+                            <div class="form-group">
+                                <label for="title">Recipe's title</label>
+                                <input type="text" class="form-control" id="title" placeholder="Mushroom pie" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Your name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Jack" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="body">Body</label>
+                                <textarea class="form-control" id="body" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Add" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCSh2WHriyF6kFmUFnaeXn5349GUsUlSic",
+			authDomain: "recipes-c65d1.firebaseapp.com",
+			databaseURL: "https://recipes-c65d1.firebaseio.com",
+			projectId: "recipes-c65d1",
+			storageBucket: "recipes-c65d1.appspot.com",
+			messagingSenderId: "612456892765",
+			appId: "1:612456892765:web:f7b85265b2628a931b80b4"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		const db = firebase.firestore();
+    </script>
+
+    <script src="files/main.js"></script>
+
+</body>
+</html>
